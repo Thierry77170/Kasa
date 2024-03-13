@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  width: 309px;
+}
+.header__nav--liens {
+  width: 100%;
+  text-align: end;
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 24px;
+  color: #000000;
+}
+
+/******* Media queries **********/
+/*  Small devices (phones, less than 600px)  */
+@media (max-width: 600px) {
+  .header {
+    height: 47px;
+    min-width: 288px;
+  }
+  .header__logo {
+    width: 40%;
+    height: auto;
+  }
+  .header__nav {
+    height: auto;
+    width: 100%;
+  }
+  .header__nav--liens {
+    font-size: 12px;
+    width: 50%;
+  }
+}/*# sourceMappingURL=header.css.map */
