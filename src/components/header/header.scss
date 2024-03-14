@@ -1,7 +1,8 @@
 .header {
     display: flex;
     justify-content: space-between;
-    max-width: 1240px;
+    max-width: 1140px;
+    padding: 50px 100px 0px 100px;
     margin: auto;
     &__nav {
         display: flex;
@@ -21,10 +22,11 @@
 
 /******* Media queries **********/
 /*  Small devices (phones, less than 600px)  */
-@media (max-width: 600px) {
+@media (max-width: 675px) {
     .header {
         height: 47px;
         min-width: 288px;
+        padding: 16px 16px 0px 16px;
         &__logo {
             width: 40%;
             height: auto;
