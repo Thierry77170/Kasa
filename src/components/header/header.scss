@@ -17,6 +17,9 @@
             font-size: 24px;
             color: #000000;
         }
+        &--liens.active {
+            text-decoration: underline;
+        }
     }
 }
 

@@ -19,6 +19,9 @@
   font-size: 24px;
   color: #000000;
 }
+.header__nav--liens.active {
+  text-decoration: underline;
+}
 
 /******* Media queries **********/
 /*  Small devices (phones, less than 600px)  */

@@ -1,8 +1,21 @@
-import React from 'react'
+import { createBrowserRouter } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
 import Header from './components/header/Header.jsx'
 
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Header />
+  },
+  {
+    path: '/aPropos',
+    element: <Header />
+  }
+])
+
 function App() {
-  return <Header />
+  return <RouterProvider router={router} />
 }
 
 export default App
