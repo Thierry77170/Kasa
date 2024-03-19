@@ -1,21 +1,37 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import Header from './components/header/Header.jsx'
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Header />
+    element: <Root />,
+    children: [
+      {
+        path: '/home',
+        element: <Home />
+      },
+      {
+        path: '/about',
+        element: <About />
+      }
+    ]
   },
-  {
-    path: '/aPropos',
-    element: <Header />
-  }
 ])
 
 function App() {
   return <RouterProvider router={router} />
+}
+
+function Root() {
+  return <>
+    <Header />
+    <Outlet />
+  </>
 }
 
 export default App
