@@ -5,14 +5,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: $colorBlack;
     height: 209px;
     &__logo {
         margin: 36px 0px 18px 0px;
     }
     &__text {
         font-family: $font-montserrat;
-        color: #FFFFFF;
+        font-size: 24px;
+        color: $colorWhite;
         margin: 36px 0px 18px 0px;
     }
+}
+
+/******* Media queries **********/
+/*  Small devices (phones, less than 395px)  */
+@media (max-width: 395px) {
+    .footer {
+        &__text {
+            font-size: 12px;
+            width: 120px;
+            text-align: center;
+            margin: 4px 0px 50px 0px;
+        }
+    }
+
 }

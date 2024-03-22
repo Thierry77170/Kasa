@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 708px;
+    height: 658px;
     &__title {
         color: $colorRed;
         font-size: 288px;
@@ -31,7 +31,7 @@
 
 
 /******* Media queries **********/
-/*  Small devices (phones, less than 600px)  */
+/*  Small devices (phones, less than 675px)  */
 @media (max-width: 675px) {
     .container {
         height: 572px;

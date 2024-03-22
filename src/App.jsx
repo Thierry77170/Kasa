@@ -3,8 +3,8 @@ import { RouterProvider } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
 import PageError from './pages/pageError/PageError.jsx'
 import Header from './components/header/Header.jsx'
-import Home from './pages/Home.jsx'
-import About from './pages/About.jsx'
+import Home from './pages/home/Home.jsx'
+import About from './pages/about/About.jsx'
 import Footer from './components/footer/Footer.jsx'
 
 
