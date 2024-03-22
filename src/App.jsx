@@ -5,6 +5,7 @@ import PageError from './pages/pageError/PageError.jsx'
 import Header from './components/header/Header.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
+import Footer from './components/footer/Footer.jsx'
 
 
 const router = createBrowserRouter([
@@ -36,6 +37,7 @@ function Root() {
   return <>
     <Header />
     <Outlet />
+    <Footer />
   </>
 }
 
