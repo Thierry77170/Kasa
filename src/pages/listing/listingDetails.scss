@@ -1,0 +1,13 @@
+.listingDetails {
+    max-width: 1440px;
+    margin: auto
+}
+
+/******* Media queries **********/
+/*  Small devices (phones, less than 675px)  */
+@media (max-width: 675px) {
+    .listingDetails {
+        min-width: 288px;
+        padding: 0px 16px;
+    }
+}
