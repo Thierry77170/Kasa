@@ -6,7 +6,12 @@ function Card() {
     return (
         <div className='card-container'>
             {listingsData.map(listing => (
-                <NavLink key={listing.identifiant} to={`/listing/${listing.identifiant}`} className='card' activeClassName='active'>
+                <NavLink
+                    key={listing.identifiant} 
+                    to={`/listing/${listing.identifiant}`} 
+                    className='card' 
+                    activeClassName='active'
+                >
                     <img src={listing.cover} alt="image de couverture" className="card__img" />
                     <h2 className="card__title">{listing.title}</h2>
                 </NavLink>

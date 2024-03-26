@@ -4,7 +4,7 @@
 }
 
 /******* Media queries **********/
-/*  Small devices (phones, less than 675px)  */
+/*  Small devices (phones, less than 676px)  */
 @media (max-width: 675px) {
   .home {
     min-width: 288px;
