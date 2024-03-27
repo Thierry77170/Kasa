@@ -1,13 +1,51 @@
+@import '../../../style/variables/variables';
+
 .listingDetails {
     max-width: 1440px;
     margin: auto;
 }
 
+.headerContainer {
+    margin: 0px 0px 0px 100px;
+    &__title {
+        max-width: 1240px;
+        width: 50%;      
+        font-family: $font-montserrat;
+        font-weight: 500;
+        color: $colorRed;
+        margin: 30px 0px 0px 0px;
+    }
+    &__location {
+        max-width: 1240px;
+        width: 50%;
+        font-family: $font-montserrat;
+        font-weight: 500;
+        font-size: 18px;
+        margin: 10px 0px 18px 0px;
+    }
+    &__keywords {
+        max-width: 1240px;
+        width: 50%;
+    }
+}
+
 /******* Media queries **********/
-/*  Small devices (phones, less than 675px)  */
+/*  Small devices (phones, less than 676px)  */
 @media (max-width: 675px) {
     .listingDetails {
         min-width: 288px;
         padding: 0px 16px;
+    }
+    .headerContainer {
+        margin: 15px 0px 0px 0px;
+        &__title {
+            width: 100%;
+            font-size: 18px;
+            margin: 15px 0px 0px 0px;
+        }
+        &__location {
+            width: 100%;
+            font-size: 14px;
+        }
     }
 }
