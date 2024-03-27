@@ -1,3 +1,5 @@
+@import '../../../style/variables/variables';
+
 .slideShowContainer {
     height: 415px;
     margin: 0px 100px;
@@ -9,6 +11,17 @@
         height: 100%;
         border-radius: 14px;
         object-fit: cover;
+    }
+    &__numbertext {
+        width: calc(100% - 0px);
+        max-width: 1240px;
+        position: absolute;
+        text-align: center;
+        top: 90%;
+        color: $colorWhite;
+        font-family: $font-montserrat;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
     }
     &__arrow {
         opacity: 0;
@@ -31,6 +44,10 @@
 }
 
 .slideShowContainer:hover .slideShowContainer__arrow {
+    opacity: 1;
+}
+
+.slideShowContainer:hover .slideShowContainer__numbertext {
     opacity: 1;
 }
 

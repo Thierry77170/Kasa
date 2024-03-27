@@ -12,6 +12,17 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+.slideShowContainer__numbertext {
+  width: calc(100% - 0px);
+  max-width: 1240px;
+  position: absolute;
+  text-align: center;
+  top: 90%;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
 .slideShowContainer__arrow {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -32,6 +43,10 @@
 }
 
 .slideShowContainer:hover .slideShowContainer__arrow {
+  opacity: 1;
+}
+
+.slideShowContainer:hover .slideShowContainer__numbertext {
   opacity: 1;
 }
 
