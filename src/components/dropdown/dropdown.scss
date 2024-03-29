@@ -1,0 +1,100 @@
+@import '../../../style/variables/variables';
+
+.containerDropdown {
+    max-width: 1023px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+    &__dropdown {
+        display: flex;
+        align-items: center;
+        height: 52px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: $colorRed;
+        position: absolute;
+        &--title {
+            font-family: $font-montserrat;
+            font-size: 18px;
+            padding-left: 10px;
+            color: $colorWhite;
+        }
+        &--img {
+            cursor: pointer;
+            position: absolute;
+            top: 35%;
+            right: 5%;
+            transition: 0.5s ease-in-out;
+        }
+    }
+    &__text {
+        font-family: $font-montserrat;
+        font-size: 18px;
+        padding: 0px 20px;
+        margin: 0px;
+
+    }
+    &__equipments {
+        font-family: $font-montserrat;
+        font-size: 18px;
+        list-style: none;
+        padding: 0px 20px;
+        margin: 0px;
+    }
+}
+
+.containerDropdown.open .content {
+    height: auto; 
+    padding-top: 60px;
+    transform: translateY(100%);
+}
+
+.containerDropdown.closed .content {
+    height: 0px;
+}
+
+.content {
+    padding-top: 52px;
+    height: auto;
+    transition: 1s ease-in-out; 
+}
+
+.containerDropdown__dropdown--img.rotate {
+    transform: rotate(180deg);
+}
+
+/******* Media queries **********/
+/*  Small devices (phones, less than 676px)  */
+@media (max-width: 675px) {
+    .containerDropdown {
+        &__dropdown {
+            height: 30px;
+            border-radius: 5px;
+            &--title {
+                font-size: 13px;
+                font-weight: 700;
+            }
+            &--img {
+                width: 16px;
+                height: 9.14px;
+            }
+        }
+        &__text {
+            font-size: 13px;
+        }
+        &__equipments {
+            font-size: 13px;
+        }
+    }
+
+    .containerDropdown.open .content {
+        padding-top: 35px;
+    }
+
+    .containerDropdown.closed .content {
+        padding-top: 30px;
+    }
+    
+}

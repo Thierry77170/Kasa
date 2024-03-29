@@ -3,6 +3,7 @@
 .keywords-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 18px;
     &__keyword {
@@ -11,7 +12,7 @@
         align-items: center;
         justify-content: center;
         background-color: $colorRed;
-        width: 115px;
+        min-width: 115px;
         height: 25px;
         &--text {
             font-size: 14px;
@@ -19,6 +20,7 @@
             font-family: $font-montserrat;
             color: $colorWhite;
             margin: 0px;
+            padding: 0px 5px;
         }
     }    
 }
@@ -29,8 +31,9 @@
     .keywords-container {
         
         &__keyword {
-            width: 84px;
+            min-width: 84px;
             height: 18px;
+            border-radius: 5px;
             &--text {
                 font-size: 10px;
                 font-weight:500;

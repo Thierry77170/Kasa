@@ -19,7 +19,7 @@ function SlideShow() {
     }
 
     return (
-        <div className='slideShowContainer'>
+        <section className='slideShowContainer'>
             <img src={selectedListing["des photos"][currentImageIndex]}
                 alt="image de couverture" 
                 className='slideShowContainer__img' /
@@ -30,7 +30,7 @@ function SlideShow() {
                 <img src={rightArrow} alt="flèche droite" className='slideShowContainer__arrow--right' onClick={nextSlide} />
             </div>
 
-        </div>
+        </section>
     );
 }
 

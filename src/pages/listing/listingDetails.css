@@ -1,12 +1,13 @@
 .listingDetails {
   max-width: 1440px;
   margin: auto;
+  padding-bottom: 55px;
 }
 
-.headerContainer {
+.titleContainer {
   margin: 0px 0px 0px 100px;
 }
-.headerContainer__title {
+.titleContainer__title {
   max-width: 1240px;
   width: 50%;
   font-family: "Montserrat", sans-serif;
@@ -14,7 +15,7 @@
   color: #FF6060;
   margin: 30px 0px 0px 0px;
 }
-.headerContainer__location {
+.titleContainer__location {
   max-width: 1240px;
   width: 50%;
   font-family: "Montserrat", sans-serif;
@@ -22,28 +23,52 @@
   font-size: 18px;
   margin: 10px 0px 18px 0px;
 }
-.headerContainer__keywords {
+.titleContainer__keywords {
   max-width: 1240px;
   width: 50%;
 }
 
+.containerDescription {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 6%;
+  margin: 0px 100px;
+  height: 100%;
+}
+
 /******* Media queries **********/
+/*  Small devices (phones, less than 1024px)  */
+@media (max-width: 1023px) {
+  .containerDescription {
+    flex-direction: column;
+    gap: 18px;
+    margin: 0px 100px;
+  }
+}
 /*  Small devices (phones, less than 676px)  */
 @media (max-width: 675px) {
   .listingDetails {
     min-width: 288px;
-    padding: 0px 16px;
+    padding: 0px 16px 16px 16px;
   }
-  .headerContainer {
+  .titleContainer {
     margin: 15px 0px 0px 0px;
   }
-  .headerContainer__title {
+  .titleContainer__title {
     width: 100%;
     font-size: 18px;
     margin: 15px 0px 0px 0px;
   }
-  .headerContainer__location {
+  .titleContainer__location {
     width: 100%;
     font-size: 14px;
+  }
+  .titleContainer__keywords {
+    width: 100%;
+  }
+  .containerDescription {
+    flex-direction: column;
+    margin: 0px;
   }
 }/*# sourceMappingURL=listingDetails.css.map */

@@ -4,10 +4,10 @@ import './home.css'
 
 function Home() {
     return (
-        <div className='home'>
+        <main className='home'>
             <MaskGroup viewType="home"/>
             <Card />
-        </div>
+        </main>
     );
 }
 

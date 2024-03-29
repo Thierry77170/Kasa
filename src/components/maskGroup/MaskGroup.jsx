@@ -14,10 +14,10 @@ function MaskGroup({ viewType }) {
     } 
 
     return (
-        <div className='maskGroup'>
+        <section className='maskGroup'>
             <img src={getImage()} alt='paysage' className='maskGroup__img' />
             {viewType === 'home' && <h1 className='maskGroup__text'>Chez vous, partout et ailleurs</h1>}
-        </div>
+        </section>
     );
 }
 
