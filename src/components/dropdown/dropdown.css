@@ -2,9 +2,8 @@
   max-width: 1023px;
   width: 100%;
   height: auto;
-  position: relative;
   overflow: hidden;
-  border: 1px solid black;
+  position: relative;
 }
 .containerDropdown__dropdown {
   display: flex;
@@ -14,6 +13,7 @@
   border-radius: 10px;
   background-color: #FF6060;
   position: absolute;
+  z-index: 1;
 }
 .containerDropdown__dropdown--title {
   font-family: "Montserrat", sans-serif;
@@ -28,34 +28,37 @@
   right: 5%;
   transition: 0.5s ease-in-out;
 }
-.containerDropdown__text {
+.containerDropdown__contentView--text {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   padding: 0px 20px;
   margin: 0px;
+  transition: 0.5s ease-in-out;
 }
-.containerDropdown__equipments {
+.containerDropdown__contentView--equipments {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   list-style: none;
   padding: 0px 20px;
   margin: 0px;
+  transition: 0.5s ease-in-out;
 }
 
-.containerDropdown.open .content {
-  height: auto;
-  padding-top: 60px;
-  transform: translateY(100%);
+.containerDropdown.closed {
+  height: 52px;
 }
 
-.containerDropdown.closed .content {
-  height: 0px;
+.containerDropdown__contentView--text.closed {
+  transform: translateY(-100%);
+}
+
+.containerDropdown__contentView--equipments.closed {
+  transform: translateY(-100%);
 }
 
 .content {
-  padding-top: 52px;
+  padding-top: 72px;
   height: auto;
-  transition: 1s ease-in-out;
 }
 
 .containerDropdown__dropdown--img.rotate {
@@ -77,16 +80,19 @@
     width: 16px;
     height: 9.14px;
   }
-  .containerDropdown__text {
+  .containerDropdown__contentView--text {
     font-size: 13px;
   }
-  .containerDropdown__equipments {
+  .containerDropdown__contentView--equipments {
     font-size: 13px;
+  }
+  .containerDropdown.closed {
+    height: 30px;
   }
   .containerDropdown.open .content {
     padding-top: 35px;
   }
   .containerDropdown.closed .content {
-    padding-top: 30px;
+    padding-top: 35px;
   }
 }/*# sourceMappingURL=dropdown.css.map */

@@ -4,9 +4,8 @@
     max-width: 1023px;
     width: 100%;
     height: auto;
-    position: relative;
     overflow: hidden;
-    border: 1px solid black;
+    position: relative;   
     &__dropdown {
         display: flex;
         align-items: center;
@@ -15,6 +14,7 @@
         border-radius: 10px;
         background-color: $colorRed;
         position: absolute;
+        z-index: 1;
         &--title {
             font-family: $font-montserrat;
             font-size: 18px;
@@ -29,36 +29,38 @@
             transition: 0.5s ease-in-out;
         }
     }
-    &__text {
-        font-family: $font-montserrat;
-        font-size: 18px;
-        padding: 0px 20px;
-        margin: 0px;
-
+    &__contentView {
+        &--text {
+            font-family: $font-montserrat;
+            font-size: 18px;
+            padding: 0px 20px;
+            margin: 0px;
+            transition: 0.5s ease-in-out; 
+        }
+        &--equipments {
+            font-family: $font-montserrat;
+            font-size: 18px;
+            list-style: none;
+            padding: 0px 20px;
+            margin: 0px;
+            transition: 0.5s ease-in-out; 
+        }
     }
-    &__equipments {
-        font-family: $font-montserrat;
-        font-size: 18px;
-        list-style: none;
-        padding: 0px 20px;
-        margin: 0px;
-    }
 }
 
-.containerDropdown.open .content {
-    height: auto; 
-    padding-top: 60px;
-    transform: translateY(100%);
+.containerDropdown.closed {
+    height: 52px;
 }
 
-.containerDropdown.closed .content {
-    height: 0px;
+.containerDropdown__contentView--text.closed {
+    transform: translateY(-100%);
 }
-
+.containerDropdown__contentView--equipments.closed {
+    transform: translateY(-100%);
+}
 .content {
-    padding-top: 52px;
+    padding-top: 72px;
     height: auto;
-    transition: 1s ease-in-out; 
 }
 
 .containerDropdown__dropdown--img.rotate {
@@ -81,12 +83,18 @@
                 height: 9.14px;
             }
         }
-        &__text {
-            font-size: 13px;
+        &__contentView {
+            &--text {
+                font-size: 13px;
+            }
+            &--equipments {
+                font-size: 13px;
+            }
         }
-        &__equipments {
-            font-size: 13px;
-        }
+    }
+
+    .containerDropdown.closed {
+        height: 30px;
     }
 
     .containerDropdown.open .content {
@@ -94,7 +102,6 @@
     }
 
     .containerDropdown.closed .content {
-        padding-top: 30px;
+        padding-top: 35px;
     }
-    
 }

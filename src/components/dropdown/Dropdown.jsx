@@ -10,7 +10,7 @@ const [isOpen, setIsOpen] = useState(false);
     }
 
     return (
-        <div className={`containerDropdown ${isOpen ? 'open' : 'closed'}`}>
+        <div className={`containerDropdown ${isOpen ? 'open' : 'closed'}`} >
             <div className='containerDropdown__dropdown'>
                 <h2 className='containerDropdown__dropdown--title'>{title}</h2>
                 <img 
@@ -20,14 +20,16 @@ const [isOpen, setIsOpen] = useState(false);
                 onClick={basculerDropdown} 
                 />
             </div>
-            {text && <p className='containerDropdown__text content'>{text}</p>}
+            <div className='containerDropdown__contentView'>
+            {text && <p className={`containerDropdown__contentView--text content ${isOpen ? 'open' : 'closed'}`}>{text}</p>}
             {equipments && (
-                <ul className='containerDropdown__equipments content'>
+                <ul className={`containerDropdown__contentView--equipments content ${isOpen ? 'open' : 'closed'}`}>
                     {equipments.map((equipment, index) => (
                         <li key={index}>{equipment}</li>
                     ))}
                 </ul>
             )}
+            </div>
         </div>
     );
 }

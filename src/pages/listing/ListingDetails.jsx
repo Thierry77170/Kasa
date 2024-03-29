@@ -8,6 +8,7 @@ import './listingDetails.css'
 function ListingDetails() {
     const { id } = useParams(); 
     const selectedListing = listingsData.find(listing => listing.identifiant === id ); 
+
     return (
         <main className='listingDetails'>
             <SlideShow />
