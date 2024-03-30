@@ -12,7 +12,7 @@ function ListingDetails() {
     return (
         <main className='listingDetails'>
             <SlideShow />
-            <section>
+            <section className='containerSection'>
                 <div className='titleContainer'>
                     <h1 className='titleContainer__title'>{selectedListing["title"]}</h1>
                     <p className='titleContainer__location'>{selectedListing["location"]}</p>
@@ -20,12 +20,14 @@ function ListingDetails() {
                         <Keywords />
                     </div>       
                 </div>
-                <div className='nameContainer'>
-
+                <div className='hoteContainer'>
+                    <p className='hoteContainer__name'>{selectedListing["hôte"]["nom"]}</p>
+                    <img src={selectedListing["hôte"]["photo"]} 
+                        alt="photo de l'hôte" 
+                        className="hoteContainer__photo" 
+                    />
                 </div>
             </section>
-            
-            
             <section className='containerDescription'>
                 <Dropdown title="Description" text={selectedListing.description} />
                 <Dropdown title="Équipements" equipments={selectedListing["équipements"]} />

@@ -4,12 +4,18 @@
   padding-bottom: 55px;
 }
 
+.containerSection {
+  display: flex;
+  flex-direction: row;
+}
+
 .titleContainer {
+  width: 100%;
   margin: 0px 0px 0px 100px;
 }
 .titleContainer__title {
   max-width: 1240px;
-  width: 50%;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #FF6060;
@@ -26,6 +32,25 @@
 .titleContainer__keywords {
   max-width: 1240px;
   width: 50%;
+}
+
+.hoteContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 100px 18px 0px;
+}
+.hoteContainer__name {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: #FF6060;
+  text-align: end;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+.hoteContainer__photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
 }
 
 .containerDescription {

@@ -6,11 +6,17 @@
     padding-bottom: 55px;
 }
 
+.containerSection {
+    display: flex;
+    flex-direction: row;
+}
+
 .titleContainer {
+    width: 100%;
     margin: 0px 0px 0px 100px;
     &__title {
         max-width: 1240px;
-        width: 50%;      
+        width: 100%;      
         font-family: $font-montserrat;
         font-weight: 500;
         color: $colorRed;
@@ -30,13 +36,31 @@
     }
 }
 
+.hoteContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 100px 18px 0px;
+    &__name {
+        font-size: 18px;
+        font-family: $font-montserrat;
+        color: $colorRed;
+        text-align: end;
+        padding-right: 10px;
+        margin-top: 10px;
+    }
+    &__photo {
+        width: 64px;
+        height: 64px;
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
+    }
+}
+
 .containerDescription {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 6%;
-    margin: 0px 100px;
-    
+    margin: 0px 100px; 
 }
 
 /******* Media queries **********/
