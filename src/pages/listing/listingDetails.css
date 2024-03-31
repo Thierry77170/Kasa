@@ -12,6 +12,7 @@
 .titleContainer {
   width: 100%;
   margin: 0px 0px 0px 100px;
+  padding-right: 20px;
 }
 .titleContainer__title {
   max-width: 1240px;
@@ -23,7 +24,7 @@
 }
 .titleContainer__location {
   max-width: 1240px;
-  width: 50%;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -31,13 +32,13 @@
 }
 .titleContainer__keywords {
   max-width: 1240px;
-  width: 50%;
+  width: 100%;
 }
 
 .hoteContainer {
   display: flex;
   flex-direction: row;
-  margin: 30px 100px 18px 0px;
+  margin: 30px 100px 14px 0px;
 }
 .hoteContainer__name {
   font-size: 18px;
@@ -51,6 +52,17 @@
   width: 64px;
   height: 64px;
   border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+}
+
+.noteContainer {
+  height: 24px;
+  margin: 0px 100px 18px 0px;
+  display: flex;
+  gap: 15px;
+}
+.noteContainer__stars {
+  width: 24px;
+  height: 24px;
 }
 
 .containerDescription {
@@ -72,6 +84,10 @@
 }
 /*  Small devices (phones, less than 676px)  */
 @media (max-width: 675px) {
+  .containerSection {
+    display: flex;
+    flex-direction: column;
+  }
   .listingDetails {
     min-width: 288px;
     padding: 0px 16px 16px 16px;
@@ -90,6 +106,33 @@
   }
   .titleContainer__keywords {
     width: 100%;
+  }
+  .hoteAndNoteContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .hoteContainer {
+    margin: 0px 0px 18px 0px;
+    justify-content: end;
+  }
+  .hoteContainer__name {
+    width: 45%;
+    font-size: 12px;
+    margin: 0px;
+  }
+  .hoteContainer__photo {
+    width: 32px;
+    height: 32px;
+  }
+  .noteContainer {
+    height: 18px;
+    margin: 8px 0px 0px 0px;
+    gap: 5px;
+  }
+  .noteContainer__stars {
+    width: 18px;
+    height: 18px;
   }
   .containerDescription {
     flex-direction: column;

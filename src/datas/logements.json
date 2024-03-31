@@ -43,7 +43,7 @@
 		],
 		"description": "Profitez du charme de la vie parisienne dans un magnifique appartement. A 3 minutes à pied du Canl Saint Martin, vous serez proche des transports, mais également de nombreux commerces. L'appartement est tout équipé, et possède également un parking pour ceux qui souhaitent se déplacer en voiture.",
 		"hôte": {
-			"name": "Della Case",
+			"nom": "Della Case",
 			"photo": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-1.jpg"
 		},
 		"note": "4",
@@ -103,7 +103,7 @@
 		],
 		"description": "Venez découvrir Paris en séjournant dans ce nid douillet au coeur du 11ème. La vue sur le parc résidentiel saura vous reposer de vos longues journées de tourisme dans la capitale française. Et pour les plus fêtards d'entre vous, la rue Jean Pierre Timbaud vous permettra de découvrir la vie nocturne parisienne à seulement 5 minutes de l'appartement.",
 		"hôte": {
-			"name": "Della Case",
+			"nom": "Della Case",
 			"photo": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-1.jpg"
 		},
 		"note": "3",
@@ -166,7 +166,7 @@
 		],
 		"description": "Venez vous imprégner de la culture parisienne dans cet ancien studio d'artiste décoré avec goût, au coeur de Montmartre.",
 		"hôte": {
-			"name": "Ligne Rolland",
+			"nom": "Ligne Rolland",
 			"photo": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-3.jpg"
 		},
 		"note": "5",
@@ -226,7 +226,7 @@
 		],
 		"description": "Ce superbe appartement vous surprendra par son charme. Entièrement refait à neuf, il est équipé avec goût. La taille des pièces vous fera douter que vous soyez à Paris. Mais il vous suffit de sortir pour voir que vous êtes au coeur des plus belles attractions de Paris : le Louvre, la Tour Eiffel, le Grand Palais sont à deux pas. À vous de venir découvrir Paris !",
 		"hôte": {
-			"name": "Sébastien Fournier",
+			"nom": "Sébastien Fournier",
 			"photo": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-5.jpg"
 		},
 		"note": "5",
