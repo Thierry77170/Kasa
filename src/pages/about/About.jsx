@@ -5,8 +5,10 @@ import './about.css'
 function About() {
     return (
         <main className='about'>
-            <MaskGroup viewType="about"/>
-            <div className="dropdownContainer">
+            <section>
+                <MaskGroup viewType="about"/>
+            </section>
+            <section className="dropdownContainer">
                 <Dropdown 
                     className="dropdownContainer__dropdown"
                     title="Fiabilité" 
@@ -37,7 +39,7 @@ function About() {
                     que les standars sont bien respectés. 
                     Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes." 
                 />
-            </div>
+            </section>
         </main>
     );
 }
