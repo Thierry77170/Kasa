@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import listingsData from '../../datas/logements.json'
 import redStar from '../../assets/redStar.png'
 import grayStar from '../../assets/grayStar.png'
+import PageError from '../pageError/PageError.jsx'
 import Keywords from '../../components/keywords/Keywords.jsx';
 import SlideShow from '../../components/slideShow/SlideShow.jsx'
 import Dropdown from '../../components/dropdown/Dropdown.jsx'
@@ -9,7 +10,11 @@ import './listingDetails.css'
 
 function ListingDetails() {
     const { id } = useParams(); 
-    const selectedListing = listingsData.find(listing => listing.identifiant === id ); 
+    const selectedListing = listingsData.find(listing => listing.identifiant === id );
+    
+    if (!selectedListing) {
+        return <PageError />; 
+    }
 
     const renderStars = (note) => {
         const maxStars = 5;

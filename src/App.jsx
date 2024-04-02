@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
-import { Routes, Route } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 import PageError from './pages/pageError/PageError.jsx'
 import Home from './pages/home/Home.jsx'
@@ -17,6 +17,14 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
+        path:'*',
+        element: <PageError />
+      },
+      {
+        path: '/',
+        element: <Home />
+      },
+      {
         path: '/home',
         element: <Home />
       },
@@ -28,10 +36,6 @@ const router = createBrowserRouter([
         path:'/Listing/:id',
         element: <ListingDetails />
       },
-      {
-        path:'*',
-        element: <PageError />
-      }
     ]
   },
 ])
@@ -41,17 +45,13 @@ function App() {
 }
 
 function Root() {
-  return <>
-    <Header />
-    <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/listing/:id" element={<ListingDetails />} />
-          <Route path="*" element={<PageError />} /> 
-    </Routes>
-    <Footer />
-  </>
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  );
 }
 
 export default App

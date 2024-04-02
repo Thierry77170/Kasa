@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import listingsData from '../../datas/logements.json';
 import './card.css'
 
@@ -6,15 +6,14 @@ function Card() {
     return (
         <section className='card-container'>
             {listingsData.map(listing => (
-                <NavLink
+                <Link
                     key={listing.identifiant} 
                     to={`/listing/${listing.identifiant}`} 
                     className='card' 
-                    activeClassName='active'
                 >
                     <img src={listing.cover} alt="image de couverture" className="card__img" />
                     <h2 className="card__title">{listing.title}</h2>
-                </NavLink>
+                </Link>
             ))}
         </section>
     );
