@@ -3,9 +3,10 @@
 .containerDropdown {
     max-width: 1023px;
     width: 100%;
-    height: auto;
+    max-height: 52px;
+    transition: max-height 0.5s ease-in-out;
     overflow: hidden;
-    position: relative;   
+    position: relative;
     &__dropdown {
         display: flex;
         align-items: center;
@@ -48,8 +49,9 @@
     }
 }
 
-.containerDropdown.closed {
-    height: 52px;
+.containerDropdown.open {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in-out;
 }
 
 .containerDropdown__contentView--text.closed {
@@ -93,8 +95,14 @@
         }
     }
 
-    .containerDropdown.closed {
-        height: 30px;
+    .containerDropdown {
+        max-height: 30px;
+        transition: max-height 0.2s ease out;
+    }
+
+    .containerDropdown.open {
+        max-height: 500px;
+        transition: max-height 0.2s ease out;
     }
 
     .containerDropdown.open .content {

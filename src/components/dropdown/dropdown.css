@@ -1,7 +1,8 @@
 .containerDropdown {
   max-width: 1023px;
   width: 100%;
-  height: auto;
+  max-height: 52px;
+  transition: max-height 0.5s ease-in-out;
   overflow: hidden;
   position: relative;
 }
@@ -44,8 +45,9 @@
   transition: 0.5s ease-in-out;
 }
 
-.containerDropdown.closed {
-  height: 52px;
+.containerDropdown.open {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in-out;
 }
 
 .containerDropdown__contentView--text.closed {
@@ -86,8 +88,13 @@
   .containerDropdown__contentView--equipments {
     font-size: 13px;
   }
-  .containerDropdown.closed {
-    height: 30px;
+  .containerDropdown {
+    max-height: 30px;
+    transition: max-height 0.2s ease out;
+  }
+  .containerDropdown.open {
+    max-height: 500px;
+    transition: max-height 0.2s ease out;
   }
   .containerDropdown.open .content {
     padding-top: 35px;
